@@ -75,3 +75,48 @@ SyncServiceAssembly.service.onReceived(type: State.self) { (state) in
 SyncServiceAssembly.service.send(State.waiting)
 
 ```
+
+## Flexibility
+
+You can use any types for `ISyncItem`: classes, structs, enums. For example, arrays:
+
+```
+public class User: Codable {
+    var id       = UUID()
+    var name     = ""
+    var children = [User]()
+    init(name: String) {
+        self.name = name
+    }
+}
+
+extension Array: ISyncItem where Element == User {
+    public static var syncTypeId: ISyncItemType {
+        return "users"
+    }
+    
+    public var syncValue: Any {
+        return try! JSONEncoder().encode(self)
+    }
+    
+    public static func instatiate(with syncValue: Any) -> ISyncItem? {
+        if let data = syncValue as? Data {
+            return try? JSONDecoder().decode([User].self, from: data)
+        }
+        return nil
+    }
+}
+
+let child = User(name: "Ivan")
+let father = User(name: "Alex")
+father.children = [child]
+
+GenericSyncService().onReceived(type: [User].self) { (users) in
+    print("received users")
+}
+
+GenericSyncService().send([father])
+
+```
+
+
