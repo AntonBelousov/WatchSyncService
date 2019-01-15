@@ -1,5 +1,5 @@
 # WatchSyncService
-This framework is needed to facilitate the work on data synchronization between ios and watchOS
+This framework is needed to facilitate the work on data synchronization between iOS and watchOS. It's ready to use on both platforms and you use it simultaneously on both platforms.
 
 # Installation
 pod 'WatchSyncService'
