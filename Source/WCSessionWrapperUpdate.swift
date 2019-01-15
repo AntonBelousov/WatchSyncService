@@ -9,13 +9,12 @@
 import Foundation
 import WatchConnectivity
 
-public class WCSessionWrapper: NSObject, IConnectivityService {
+public class WCSessionWrapperUsingMessage: NSObject, IConnectivityService {
     var session: WCSession?
     var onReceiveHandler: (ISyncItem) -> () = {_ in }
     public var parser: IApplicationContextParser!
     
     public func run() {
-        
         if session?.activationState == .activated {
             return
         }
@@ -39,25 +38,15 @@ public class WCSessionWrapper: NSObject, IConnectivityService {
             print(self, #function, #line, "there is no session")
             return
         }
-        do {
-            try session.updateApplicationContext(parser.encodeConextFrom(item))
-            
-        } catch let error as NSError {
-            print(self, #function, #line, error.description)
-        }
+        session.sendMessage(parser.encodeConextFrom(item), replyHandler: nil, errorHandler: nil)
     }
     
     public func onReceive(handler: @escaping (ISyncItem) -> ()) {
         onReceiveHandler = handler
-        if let ctx = session?.receivedApplicationContext {
-            if let item = parser.decodeItemFrom(ctx) {
-                onReceiveHandler(item)
-            }
-        }
     }
 }
 
-extension WCSessionWrapper: WCSessionDelegate {
+extension WCSessionWrapperUsingMessage: WCSessionDelegate {
     public func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {}
     
     #if os(iOS)
@@ -68,6 +57,11 @@ extension WCSessionWrapper: WCSessionDelegate {
     #endif
     public func session(_ session: WCSession, didReceiveApplicationContext applicationContext: [String : Any]) {
         if let item = parser.decodeItemFrom(applicationContext) {
+            onReceiveHandler(item)
+        }
+    }
+    public func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
+        if let item = parser.decodeItemFrom(message) {
             onReceiveHandler(item)
         }
     }

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F35DDBD521EDDC69009700AF /* WCSessionWrapperUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35DDBD421EDDC69009700AF /* WCSessionWrapperUpdate.swift */; };
+		F35DDBD621EDDC69009700AF /* WCSessionWrapperUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35DDBD421EDDC69009700AF /* WCSessionWrapperUpdate.swift */; };
+		F35DDBD821EDDE9A009700AF /* GenericSyncService+default.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35DDBD721EDDE9A009700AF /* GenericSyncService+default.swift */; };
+		F35DDBD921EDDE9A009700AF /* GenericSyncService+default.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35DDBD721EDDE9A009700AF /* GenericSyncService+default.swift */; };
 		F3AFA0A921E80EFE00A27E95 /* MockServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AFA0A621E80EFE00A27E95 /* MockServices.swift */; };
 		F3AFA0AA21E80EFE00A27E95 /* MockModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AFA0A721E80EFE00A27E95 /* MockModel.swift */; };
 		F3AFA0AB21E80EFE00A27E95 /* ConnectivityServiceTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AFA0A821E80EFE00A27E95 /* ConnectivityServiceTestCase.swift */; };
@@ -50,6 +54,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F35DDBD421EDDC69009700AF /* WCSessionWrapperUpdate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WCSessionWrapperUpdate.swift; sourceTree = "<group>"; };
+		F35DDBD721EDDE9A009700AF /* GenericSyncService+default.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GenericSyncService+default.swift"; sourceTree = "<group>"; };
 		F3AFA0A621E80EFE00A27E95 /* MockServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockServices.swift; sourceTree = "<group>"; };
 		F3AFA0A721E80EFE00A27E95 /* MockModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockModel.swift; sourceTree = "<group>"; };
 		F3AFA0A821E80EFE00A27E95 /* ConnectivityServiceTestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectivityServiceTestCase.swift; sourceTree = "<group>"; };
@@ -120,11 +126,13 @@
 				F3E74D8721E7FEB000A49FF7 /* ApplicationContextParser.swift */,
 				F3E74D8821E7FEB000A49FF7 /* ApplicationContextParser+aux.swift */,
 				F3E74D8B21E7FEB000A49FF7 /* GenericSyncService.swift */,
+				F35DDBD721EDDE9A009700AF /* GenericSyncService+default.swift */,
 				F3E74D8521E7FEB000A49FF7 /* IApplicationContextParser.swift */,
 				F3E74D8A21E7FEB000A49FF7 /* IConnectivityService.swift */,
 				F3E74D8621E7FEB000A49FF7 /* ISyncItem.swift */,
 				F3E74D8921E7FEB000A49FF7 /* SyncItemHandler.swift */,
 				F3E74D8C21E7FEB000A49FF7 /* WCSessionWrapper.swift */,
+				F35DDBD421EDDC69009700AF /* WCSessionWrapperUpdate.swift */,
 				F3E74D6C21E7FC6300A49FF7 /* Supporting Files */,
 			);
 			path = Source;
@@ -301,9 +309,11 @@
 				F3E74DB421E80A7300A49FF7 /* SyncItemHandler.swift in Sources */,
 				F3E74DAE21E80A7300A49FF7 /* ApplicationContextParser.swift in Sources */,
 				F3E74DB121E80A7300A49FF7 /* IApplicationContextParser.swift in Sources */,
+				F35DDBD821EDDE9A009700AF /* GenericSyncService+default.swift in Sources */,
 				F3E74DB321E80A7300A49FF7 /* ISyncItem.swift in Sources */,
 				F3E74DB021E80A7300A49FF7 /* GenericSyncService.swift in Sources */,
 				F3E74DAF21E80A7300A49FF7 /* ApplicationContextParser+aux.swift in Sources */,
+				F35DDBD521EDDC69009700AF /* WCSessionWrapperUpdate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,9 +326,11 @@
 				F3E74DBC21E80A7300A49FF7 /* SyncItemHandler.swift in Sources */,
 				F3E74DB621E80A7300A49FF7 /* ApplicationContextParser.swift in Sources */,
 				F3E74DB921E80A7300A49FF7 /* IApplicationContextParser.swift in Sources */,
+				F35DDBD921EDDE9A009700AF /* GenericSyncService+default.swift in Sources */,
 				F3E74DBB21E80A7300A49FF7 /* ISyncItem.swift in Sources */,
 				F3E74DB821E80A7300A49FF7 /* GenericSyncService.swift in Sources */,
 				F3E74DB721E80A7300A49FF7 /* ApplicationContextParser+aux.swift in Sources */,
+				F35DDBD621EDDC69009700AF /* WCSessionWrapperUpdate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

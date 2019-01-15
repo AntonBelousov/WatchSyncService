@@ -37,42 +37,18 @@ extension State: ISyncItem {
 
 ```
 
-### Assembly Services
-
-```
-class SyncServiceAssembly {
- 
-    static let service = GenericSyncService(withTypes: [
-        State.self
-        ])
-}
-
-extension GenericSyncService {
-    convenience init(withTypes types: [ISyncItem.Type]) {
-        self.init()
-        
-        let parser = ApplicationContextParser()
-        parser.setItemTypes(types)
-
-        let connectivityService = WCSessionWrapper()
-        connectivityService.parser = parser
-        
-        self.runWith(connectivityService: connectivityService)
-    }
-}
-
-```
-
 ### Using service
 ```
 
 // listen incoming messages (on both iOS and watchOS)
-SyncServiceAssembly.service.onReceived(type: State.self) { (state) in
+GenericSyncService.setSyncTipes(types: [State.self]) // On both iOS and watchOS apps
+
+GenericSyncService.default.onReceived(type: State.self) { (state) in
     print("state received: ", state.rawValue)
 }
 
 // send message (on both iOS and watchOS)
-SyncServiceAssembly.service.send(State.waiting)
+GenericSyncService.default.send(State.waiting)
 
 ```
 
@@ -111,11 +87,13 @@ let child = User(name: "Ivan")
 let father = User(name: "Alex")
 father.children = [child]
 
-GenericSyncService().onReceived(type: [User].self) { (users) in
+GenericSyncService.setSyncTipes(types: [User.self])
+
+GenericSyncService.default.onReceived(type: [User].self) { (users) in
     print("received users")
 }
 
-GenericSyncService().send([father])
+GenericSyncService.default.send([father])
 
 ```
 

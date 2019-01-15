@@ -9,9 +9,7 @@
 import Foundation
 import WatchConnectivity
 
-public class GenericSyncService: NSObject {
-    static let shared = GenericSyncService()
-    
+public class GenericSyncService: NSObject {    
     private var connectivityService: IConnectivityService?
     
     private var handlers = [ISyncItemType: ISyncItemHandler]()
