@@ -1,14 +1,24 @@
 # WatchSyncService
 This framework is needed to facilitate the work on data synchronization between iOS and watchOS. It's ready to use on both platforms and you use it simultaneously on both platforms.
 
-![example1](https://github.com/AntonBelousov/Assets/blob/master/ezgif-5-4274aa0223b8.gif)
-
-
 # Installation
 pod 'WatchSyncService'
 
-# Example
+## How it works
 
+Default behaviour
+
+![default behaviour](https://github.com/AntonBelousov/Assets/blob/master/ezgif-5-4274aa0223b8.gif)
+
+Watch app is not running
+
+![watch app is not running](https://github.com/AntonBelousov/Assets/blob/master/ezgif-5-8fd1f060810a.gif)
+
+iOS app is not running
+
+![iOS app is not running](https://github.com/AntonBelousov/Assets/blob/master/ezgif-5-5dd5d9182080.gif)
+
+# Example
 ### Model
 
 ```
