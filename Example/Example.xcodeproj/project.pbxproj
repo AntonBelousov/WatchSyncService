@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F32B34C7229C1B5000558609 /* WatchSyncService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3C49968229C1B3A009AD6F0 /* WatchSyncService.framework */; };
+		F32B34C8229C1B5000558609 /* WatchSyncService.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F3C49968229C1B3A009AD6F0 /* WatchSyncService.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F32B34CB229C1B5700558609 /* WatchSyncService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3C4996A229C1B3A009AD6F0 /* WatchSyncService.framework */; };
+		F32B34CC229C1B5700558609 /* WatchSyncService.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F3C4996A229C1B3A009AD6F0 /* WatchSyncService.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F35DDB8A21EDD872009700AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35DDB8921EDD872009700AF /* AppDelegate.swift */; };
 		F35DDB8C21EDD872009700AF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35DDB8B21EDD872009700AF /* ViewController.swift */; };
 		F35DDB8F21EDD872009700AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F35DDB8D21EDD872009700AF /* Main.storyboard */; };
@@ -20,13 +24,23 @@
 		F35DDBB321EDD891009700AF /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35DDBB221EDD891009700AF /* NotificationController.swift */; };
 		F35DDBB521EDD891009700AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F35DDBB421EDD891009700AF /* Assets.xcassets */; };
 		F35DDBBA21EDD891009700AF /* watch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = F35DDB9D21EDD88F009700AF /* watch.app */; };
-		F38676DE21EDF95B00DEDB5B /* WatchSyncService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F38676DD21EDF95B00DEDB5B /* WatchSyncService.framework */; };
-		F38676DF21EDF95B00DEDB5B /* WatchSyncService.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F38676DD21EDF95B00DEDB5B /* WatchSyncService.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		F38676E121EDF95F00DEDB5B /* WatchSyncService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F38676E021EDF95F00DEDB5B /* WatchSyncService.framework */; };
-		F38676E221EDF95F00DEDB5B /* WatchSyncService.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F38676E021EDF95F00DEDB5B /* WatchSyncService.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		F32B34C9229C1B5000558609 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F3C49961229C1B3A009AD6F0 /* WatchSyncService.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F3E74D3521E7EF4E00A49FF7;
+			remoteInfo = WatchSyncServiceiOS;
+		};
+		F32B34CD229C1B5700558609 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F3C49961229C1B3A009AD6F0 /* WatchSyncService.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F3E74D4321E7EF7200A49FF7;
+			remoteInfo = WatchSyncServiceWatchOS;
+		};
 		F35DDBAB21EDD891009700AF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F35DDB7E21EDD872009700AF /* Project object */;
@@ -41,9 +55,40 @@
 			remoteGlobalIDString = F35DDB9C21EDD88F009700AF;
 			remoteInfo = watch;
 		};
+		F3C49967229C1B3A009AD6F0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F3C49961229C1B3A009AD6F0 /* WatchSyncService.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F3E74D3621E7EF4E00A49FF7;
+			remoteInfo = WatchSyncServiceiOS;
+		};
+		F3C49969229C1B3A009AD6F0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F3C49961229C1B3A009AD6F0 /* WatchSyncService.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F3E74D4421E7EF7200A49FF7;
+			remoteInfo = WatchSyncServiceWatchOS;
+		};
+		F3C4996B229C1B3A009AD6F0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F3C49961229C1B3A009AD6F0 /* WatchSyncService.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F3E74DC221E80C6200A49FF7;
+			remoteInfo = WatchSyncServiceTests;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		F32A8CFD229C174E003C793C /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F35DDBBE21EDD891009700AF /* Embed App Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -72,7 +117,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				F38676DF21EDF95B00DEDB5B /* WatchSyncService.framework in Embed Frameworks */,
+				F32B34C8229C1B5000558609 /* WatchSyncService.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -83,7 +128,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				F38676E221EDF95F00DEDB5B /* WatchSyncService.framework in Embed Frameworks */,
+				F32B34CC229C1B5700558609 /* WatchSyncService.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -109,8 +154,7 @@
 		F35DDBB421EDD891009700AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F35DDBB621EDD891009700AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F35DDBB721EDD891009700AF /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
-		F38676DD21EDF95B00DEDB5B /* WatchSyncService.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = WatchSyncService.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F38676E021EDF95F00DEDB5B /* WatchSyncService.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = WatchSyncService.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3C49961229C1B3A009AD6F0 /* WatchSyncService.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = WatchSyncService.xcodeproj; path = ../WatchSyncService.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,7 +162,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F38676DE21EDF95B00DEDB5B /* WatchSyncService.framework in Frameworks */,
+				F32B34C7229C1B5000558609 /* WatchSyncService.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -126,7 +170,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F38676E121EDF95F00DEDB5B /* WatchSyncService.framework in Frameworks */,
+				F32B34CB229C1B5700558609 /* WatchSyncService.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,8 +187,7 @@
 		F35DDB7D21EDD872009700AF = {
 			isa = PBXGroup;
 			children = (
-				F38676E021EDF95F00DEDB5B /* WatchSyncService.framework */,
-				F38676DD21EDF95B00DEDB5B /* WatchSyncService.framework */,
+				F3C49961229C1B3A009AD6F0 /* WatchSyncService.xcodeproj */,
 				F35DDB8821EDD872009700AF /* Example */,
 				F35DDB9E21EDD890009700AF /* watch */,
 				F35DDBAD21EDD891009700AF /* watch Extension */,
@@ -206,6 +249,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F3C49962229C1B3A009AD6F0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F3C49968229C1B3A009AD6F0 /* WatchSyncService.framework */,
+				F3C4996A229C1B3A009AD6F0 /* WatchSyncService.framework */,
+				F3C4996C229C1B3A009AD6F0 /* WatchSyncServiceTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -223,6 +276,7 @@
 			);
 			dependencies = (
 				F35DDBB921EDD891009700AF /* PBXTargetDependency */,
+				F32B34CA229C1B5000558609 /* PBXTargetDependency */,
 			);
 			name = Example;
 			productName = Example;
@@ -236,6 +290,7 @@
 				F35DDB9B21EDD88F009700AF /* Resources */,
 				F35DDBBE21EDD891009700AF /* Embed App Extensions */,
 				F35DDBCA21EDD96B009700AF /* Frameworks */,
+				F32A8CFD229C174E003C793C /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -259,6 +314,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				F32B34CE229C1B5700558609 /* PBXTargetDependency */,
 			);
 			name = "watch Extension";
 			productName = "watch Extension";
@@ -277,12 +333,14 @@
 				TargetAttributes = {
 					F35DDB8521EDD872009700AF = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 					};
 					F35DDB9C21EDD88F009700AF = {
 						CreatedOnToolsVersion = 10.1;
 					};
 					F35DDBA821EDD891009700AF = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
@@ -297,6 +355,12 @@
 			mainGroup = F35DDB7D21EDD872009700AF;
 			productRefGroup = F35DDB8721EDD872009700AF /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = F3C49962229C1B3A009AD6F0 /* Products */;
+					ProjectRef = F3C49961229C1B3A009AD6F0 /* WatchSyncService.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				F35DDB8521EDD872009700AF /* Example */,
@@ -305,6 +369,30 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		F3C49968229C1B3A009AD6F0 /* WatchSyncService.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = WatchSyncService.framework;
+			remoteRef = F3C49967229C1B3A009AD6F0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F3C4996A229C1B3A009AD6F0 /* WatchSyncService.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = WatchSyncService.framework;
+			remoteRef = F3C49969229C1B3A009AD6F0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F3C4996C229C1B3A009AD6F0 /* WatchSyncServiceTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = WatchSyncServiceTests.xctest;
+			remoteRef = F3C4996B229C1B3A009AD6F0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		F35DDB8421EDD872009700AF /* Resources */ = {
@@ -359,6 +447,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		F32B34CA229C1B5000558609 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = WatchSyncServiceiOS;
+			targetProxy = F32B34C9229C1B5000558609 /* PBXContainerItemProxy */;
+		};
+		F32B34CE229C1B5700558609 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = WatchSyncServiceWatchOS;
+			targetProxy = F32B34CD229C1B5700558609 /* PBXContainerItemProxy */;
+		};
 		F35DDBAC21EDD891009700AF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = F35DDBA821EDD891009700AF /* watch Extension */;
@@ -518,6 +616,7 @@
 		F35DDB9921EDD873009700AF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PUSLWJPKKF;
@@ -528,7 +627,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ru.WatchSyncService.example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -536,6 +635,7 @@
 		F35DDB9A21EDD873009700AF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PUSLWJPKKF;
@@ -546,7 +646,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ru.WatchSyncService.example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -567,7 +667,7 @@
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 5.1;
 			};
@@ -589,7 +689,7 @@
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 5.1;
 			};
