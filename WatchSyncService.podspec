@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name        = "WatchSyncService"
-    s.version     = "1.0.1"
+    s.version     = "1.0.2"
     s.summary     = "WatchSyncService"
     s.homepage    = "https://github.com/AntonBelousov/WatchSyncService"
     s.license     = { :type => "MIT" }
